@@ -56,24 +56,22 @@ function Users() {
           <h1 className="font-semibold text-3xl text-center">
             Usuarios Registrados
           </h1>
-          <div className="w-80 flex justify-center">
+          <div className="w-[350px] flex justify-center">
             {data.length > 0 ? (
-              <table className="w-80 min-h-[200px] text-center border-collapse border border-slate-500">
+              <table>
                 <thead>
-                  <tr className="bg-yellow-500">
-                    <th className="border border-slate-600">Nombre</th>
-                    <th className="border border-slate-600">Carrera</th>
-                    <th className="border border-slate-600">Edad</th>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Carrera</th>
+                    <th>Edad</th>
                   </tr>
                 </thead>
                 <tbody>
                   {data.map((user, i) => (
                     <tr key={i}>
-                      <td className="border border-slate-700">{user.nombre}</td>
-                      <td className="border border-slate-700">
-                        {user.carrera}
-                      </td>
-                      <td className="border border-slate-700">{user.edad}</td>
+                      <td>{user.nombre}</td>
+                      <td>{user.carrera}</td>
+                      <td>{user.edad}</td>
                     </tr>
                   ))}
                 </tbody>
